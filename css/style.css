@@ -1,0 +1,30 @@
+.container {
+    position: relative;
+    color: white;
+    width: 640px;
+}
+.image-container{
+    position: absolute;
+}
+.scene-text
+{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size : 64px;
+    font-family: Futura;
+    font-weight: bold;
+}
+#main_container
+{
+    clip:rect(0px 640px 480px 0px);
+    margin-left:0px;
+    position:absolute;
+    background-color:#222222;
+    width: 640px;
+    height: 480px;
+}
+html, body {
+    margin: 0;
+    background: #EEEEEE;
+}
