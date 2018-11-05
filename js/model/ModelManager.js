@@ -88,8 +88,15 @@ ModelManager = (function () {
     };
 
     p.loadComplete = function () {
-        var event = new Event("complete");
-        dispatchEvent(event);
+        var event;
+        try {
+            event = new Event("complete");
+        } catch (e) {
+            event = document.createEvent('Event');
+            event.initEvent('complete', false, false);
+        }
+        var elm = document.getElementById("main_container");
+        elm.dispatchEvent(event);
     };
 
     p.getSceneDataList = function () {
